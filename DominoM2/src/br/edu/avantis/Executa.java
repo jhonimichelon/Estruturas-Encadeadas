@@ -1,21 +1,24 @@
 package br.edu.avantis;
 
 public class Executa {
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Lista listaInicial = new Lista();
 		Lista jogador1 = new Lista();
 		Lista jogador2 = new Lista();
 		Lista tabuleiro = new Lista();
-		
+
 		Peca peca = new Peca(0, 0);
-		
+
 		listaInicial.adiciona(6, 1);
 		listaInicial.adiciona(1, 2);
 		listaInicial.adiciona(2, 2);
 
-		peca = listaInicial.retirar();
+		// FAZER A RETIRADA DO ELEMENTO DA LISTA E ADICIONAR NA LISTA DO JOGADOR
+		//peca = listaInicial.retirar();
+		//jogador1.adiciona(peca.valor1, peca.valor2);
+		
+		
 		jogador1.adiciona(listaInicial.fim.valor1, listaInicial.fim.valor2);
 		jogador1.adiciona(listaInicial.comeco.valor1, listaInicial.comeco.valor2);
 
@@ -30,5 +33,4 @@ public class Executa {
 		System.out.println();
 		jogador1.mostrar();
 	}
-
 }
