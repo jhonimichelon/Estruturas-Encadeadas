@@ -1,0 +1,10 @@
+package br.edu.avantis;
+
+public class ListaPecasIniciais {
+	public ListaPecasIniciais proxima;
+	
+	private Object elemento;
+	
+	
+	
+}

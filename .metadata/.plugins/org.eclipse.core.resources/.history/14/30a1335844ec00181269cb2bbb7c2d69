@@ -1,0 +1,14 @@
+package br.edu.avantis;
+
+public class Executa {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ListaPecasIniciais lista = new ListaPecasIniciais();
+		
+		lista.adiciona(6, 1);
+		
+		
+	}
+
+}

@@ -1,0 +1,11 @@
+ESTRUTURAS ENCADEADAS 
+
+	São estruturas de dados nas quais, cada uma das unidades básicas de armazenamento de informação, chamadas de nós
+ ou nodos, tem por atribuição armazenar também qual é a próxima unidade em algum critério de ordem.
+
+	ESTRUTURA BÁSICA DO NÓ: Cada nó que armazena uma informação é composto de pelo menos duas partes lógicas. Uma delas
+destinada a informação e a outra destinada aos apontadores que indicam a próxima informação (ELO ou ELOS).
+
+1-LISTAS UNICAMENTE ENCADEADAS (LUE)
+	Cada unidade de informação aponta qual é o próximo
+	É a lista encadeada onde cada nó de informação indica o próximo nó no critério escolhido.

@@ -1,0 +1,12 @@
+package br.edu.avantis;
+
+public class ListaPecasIniciais {
+	public ListaPecasIniciais proxima;
+	
+	private Object elemento;
+	
+	public void adiciona(int valor1,int valor2) {
+		Peca nova = new Peca(valor1, valor2);
+	}
+	
+}

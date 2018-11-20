@@ -1,0 +1,39 @@
+package br.edu.avantis;
+
+public class ListaPecasIniciais {
+	public Peca comeco;
+	public Peca nova = new Peca(0, 0);
+	public boolean inserir(int valor1, int valor2) {
+		Peca novo = new Peca(valor1, valor2);
+
+		if (comeco == null) {
+			comeco = novo;
+			return true;
+		}
+
+		if (valor1 == comeco.valor1) {
+			novo.eloDireita = comeco;
+			comeco = novo;
+			return true;
+		}
+
+		Peca aux, prox;
+		aux = comeco;
+
+		while (aux != null) {
+			prox = aux.eloDireita;
+			if (prox == null) {
+				aux.eloDireita = novo;
+				return true;
+			}
+			if (valor1 > aux.valor1 && valor1 < prox.valor1) {
+				novo.eloDireita = prox;
+				aux.eloDireita = novo;
+				return true;
+			}
+			aux = aux.eloDireita;
+		}
+		return false;
+	}
+	
+}

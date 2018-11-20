@@ -1,0 +1,7 @@
+package br.edu.avantis;
+
+public class ListaPecasIniciais {
+	public Peca peca = new Peca(0, 0);
+	
+	
+}

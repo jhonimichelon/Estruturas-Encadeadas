@@ -1,0 +1,12 @@
+package br.edu.avantis;
+
+public class Executa {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Peca peca = new Peca(0, 0);
+		
+		System.out.println(peca);
+	}
+
+}

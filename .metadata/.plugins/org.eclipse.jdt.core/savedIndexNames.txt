@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\Jhoni\Documents\SI - Avantis - Quarto Semestre\Estrutura de Dados\Estruturas Encadeadas\.metadata\.plugins\org.eclipse.jdt.core
+1557940164.index
+99159312.index
+2541499274.index

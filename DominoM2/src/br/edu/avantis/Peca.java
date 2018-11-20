@@ -1,0 +1,15 @@
+package br.edu.avantis;
+
+public class Peca {
+	public int valor1;
+	public int valor2;
+	public Peca eloEsquerda;
+	public Peca eloDireita;
+
+	public Peca(int v1, int v2) {
+		valor1 = v1;
+		valor2 = v2;
+		eloEsquerda = null;
+		eloDireita = null;
+	}
+}

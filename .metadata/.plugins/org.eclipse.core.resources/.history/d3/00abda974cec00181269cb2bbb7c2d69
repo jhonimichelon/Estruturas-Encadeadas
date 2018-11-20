@@ -1,0 +1,17 @@
+package br.edu.avantis;
+
+public class Executa {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Lista listaInicial = new Lista();
+		listaInicial.adiciona(6, 1);
+		listaInicial.adiciona(1, 2);
+		listaInicial.adiciona(2, 2);
+
+		System.out.println(listaInicial.comeco.valor1 + " " + listaInicial.comeco.valor2);
+		System.out.println(listaInicial.fim.valor1 + " " + listaInicial.fim.valor2);
+		System.out.println(listaInicial.fim.eloEsquerda.valor1 + " " + listaInicial.fim.eloEsquerda.valor2);
+	}
+
+}

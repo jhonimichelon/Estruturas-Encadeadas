@@ -1,0 +1,85 @@
+package br.edu.avantis;
+
+public class Lista {
+	public No comeco;
+	public No fim;
+	
+	public boolean inserirLDE(int valor1, int valor2) {
+		No novo = new No(valor1,valor2);
+		No aux, prox;
+
+		// Lista está vazia
+		if (comeco == null) {
+			comeco = novo;
+			fim = novo;
+			return true;
+		}
+
+		// Inserir no começo
+		if (comeco.info == valor) {
+			novo.elop = comeco;
+			comeco.eloa = novo;
+			comeco = novo;
+			return true;
+		}
+
+		// procura o lugar do valor
+		aux = comeco;
+		while (aux != null) {
+			prox = aux.elop;
+			if (prox == null) {
+				aux.elop = novo;
+				novo.eloa = fim;
+				fim = novo;
+				return true;
+			}
+
+			if (aux.info < valor && prox.info > valor) {
+				aux.elop = novo;
+				novo.elop = prox;
+				novo.eloa = aux;
+				prox.eloa = novo;
+				return true;
+			}
+			aux = aux.elop;
+		}
+		return false;
+	}
+
+	public boolean retirarLDE(String valor) {
+		No aux, prox, ant;
+
+		aux = comeco;
+		while (aux != null) {
+			if (aux.info == valor) {
+				if (comeco == aux) { // Retirada do primeiro elemento
+					if (aux.elop == null) { // só tem um
+						comeco = null;
+						fim = null;
+						return true;
+					} else { // é o primeiro
+						prox = aux.elop;
+						prox.eloa = null;
+						comeco = prox;
+						return true;
+					}
+				}
+				if (fim == aux) { // é o último
+					ant = aux.eloa;
+					ant.elop = null;
+					fim = ant;
+					return true;
+				}
+				// é uma retirada do meio da lista
+				ant = aux.eloa;
+				prox = aux.elop;
+				ant.elop = prox;
+				prox.eloa = ant;
+				return true;
+			}
+			aux = aux.elop;
+		}
+		return false;
+	}
+
+}
